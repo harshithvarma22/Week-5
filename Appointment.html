@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="Appontmentstyle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="background-color: rgb(255, 241, 241); color: rgb(244, 50, 50);">Doctor Appointment System</h1>
+        </header>
+
+        <section class="appointment-form">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" required>
+
+                <label for="patientAge">Patient Age:</label>
+                <input type="number" id="patientAge" required>
+
+                <label for="patientAddress">Patient Address:</label>
+                <textarea id="patientAddress" required></textarea>
+
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" required>
+                    <option value="doctor1">Dr. Smith</option>
+                    <option value="doctor2">Dr. Johnson</option>
+                    <option value="doctor3">Dr. Williams</option>
+                </select>
+
+                <label for="appointmentDate">Select Date:</label>
+                <input type="date" id="appointmentDate" required>
+
+                <label for="slot">Select Slot:</label>
+                <select id="slot" required>
+                    <!-- Slots will be dynamically populated by JS -->
+                </select>
+
+                <button type="button" onclick="bookAppointment()">Book Appointment</button>
+            </form>
+        </section>
+
+        <section class="doctor-profiles">
+            <h2>Doctors</h2>
+            <input type="text" id="doctorSearch" placeholder="Search doctors...">
+            <div id="doctorProfiles">
+                <!-- Doctor profiles will be displayed here -->
+            </div>
+        </section>
+
+        <section class="slots-status">
+            <h2>Slot Status</h2>
+            <div id="slotsStatus">
+                <!-- Available and booked slots will be displayed here -->
+            </div>
+        </section>
+
+        <section class="booked-appointments">
+            <h2>Booked Appointments</h2>
+            <input type="text" id="appointmentSearch" placeholder="Search appointments...">
+            <div id="bookedAppointments">
+                <!-- Booked appointments will be displayed here -->
+            </div>
+        </section>
+        
+        
+    </div>
+
+
+    <!-- Pop-up message box -->
+    <div id="popup" class="popup">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
